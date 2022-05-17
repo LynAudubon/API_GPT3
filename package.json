@@ -1,0 +1,31 @@
+{
+  "name": "Shopify_Internship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LynAudubon/Shopify_Internship.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LynAudubon/Shopify_Internship/issues"
+  },
+  "homepage": "https://github.com/LynAudubon/Shopify_Internship#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3",
+    "path": "^0.12.7"
+  }
+}

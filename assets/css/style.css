@@ -1,8 +1,17 @@
+body {
+    background-image: url(/geissht-BzS6WjI6IhY-unsplash.jpg);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: cursive, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
 }
 
 #container {
@@ -13,12 +22,15 @@
 }
 
 #send {
-    background-color: #4C50AF;
-    max-width: 20%
+    background-color: #ECB265;
+}
+
+#send:hover {
+background-color: #ecb165a7;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #009999;
     /* Green */
     border: none;
     color: white;
@@ -31,9 +43,9 @@ button {
     width: 20%;
 }
 
-/* input {
-    padding: 8px;
-} */
+#new-prompt {
+    padding-bottom: 70px;
+}
 
 #desc {
     list-style: none;
@@ -49,7 +61,7 @@ button {
 
 ul {
     position: relative;
-    margin-top: 2em;
+    margin-top: 0;
 }
 
 li {

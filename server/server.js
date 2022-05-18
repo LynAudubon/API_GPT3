@@ -68,6 +68,11 @@ app.post('/responses', responseController.postResponse, (req, res, err) => {
   return res.status(200).send('New response posted');
 });
 
+app.delete('/responses', responseController.deleteResponse, (req,res,err) => {
+  if(err) console.log('delete', err);
+  return res.status(200);
+});
+
 
 /**
  * 404 handler

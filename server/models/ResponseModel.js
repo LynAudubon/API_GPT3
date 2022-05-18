@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const responseSchema = new mongoose.Schema({
   prompt: {
@@ -18,4 +18,4 @@ const responseSchema = new mongoose.Schema({
 
 //export the model
 const Response = mongoose.model('Response', responseSchema);
-module.exports = { Response }; 
+export default { Response }; 

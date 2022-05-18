@@ -1,15 +1,17 @@
-const Model = require('../models/ResponseModel');
+import Model from '../models/ResponseModel.js';
 
 const postResponse = async function(req, res, next){
+  console.log(req.body);
   try{
     const postNewResponse = new Model.Response({
       prompt: req.body.prompt,
       response: req.body.response,
     });
-
+d
     if (!postNewResponse.prompt && !postNewResponse.response) {
       return res.status(406).json('No response and/ or prompt');
     }else{
+      // console.log(postNewResponse);
       await postNewResponse.save();
       return next();
     }
@@ -29,7 +31,7 @@ const getResponses = function(req,res,next){
   }
 };
 
-module.exports = {
+export default {
   postResponse,
   getResponses
 };

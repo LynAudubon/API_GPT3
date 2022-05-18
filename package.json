@@ -4,6 +4,9 @@
   "description": "challenge with OpenAI",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "14.17.0"
+  },
   "scripts": {
     "start": "node server.js",
     "start-dev": "nodemon server/server.js",

@@ -1,7 +1,7 @@
 {
-  "name": "Shopify_Internship",
+  "name": "shopify_internship",
   "version": "1.0.0",
-  "description": "",
+  "description": "challenge with OpenAI",
   "main": "index.js",
   "type": "module",
   "scripts": {

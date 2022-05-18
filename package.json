@@ -8,7 +8,7 @@
     "node": "14.17.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node --es-module-specifier-resolution=node server",
     "start-dev": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

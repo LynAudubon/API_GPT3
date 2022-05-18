@@ -2,7 +2,7 @@
   "name": "shopify_internship",
   "version": "1.0.0",
   "description": "challenge with OpenAI",
-  "main": "server/server.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server/server.js",

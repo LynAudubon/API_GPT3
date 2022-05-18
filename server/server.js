@@ -15,8 +15,9 @@ const __dirname = path.dirname(__filename);
 
 //initialize the express method
 //initialize port
+import 'dotenv/config';
 const app = express();
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 
 //connect to database
 import connectDB from './models/db.js';

@@ -3,5 +3,5 @@ import 'dotenv/config';
 
 const Port = process.env.PORT || 3333;
 
-//run server locally and listen for connections
+//for running server locally and listening for connections
 app.listen(Port, () => console.log('Server running on port', Port));

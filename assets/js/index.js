@@ -1,7 +1,8 @@
+/** @jest-environment jsdom */
 let responseList = [];
 const text = '';
 const ul = document.getElementById('response-list');
-console.log(ul);
+// console.log(ul);
 
 
 const addPrompt = async function() {
@@ -16,7 +17,6 @@ const addPrompt = async function() {
     presence_penalty: 0.0,
   };
 
-  ///if data.prompt is null?????
   if(data.prompt !== ''){
     const data2 = JSON.stringify(data);
     const api_url = `/request/${data2}`;
@@ -40,6 +40,12 @@ const addPrompt = async function() {
       });
  
     document.getElementById('desc').value  = '';
+  }else{
+    const err = document.getElementById('error').children[0];
+    err.innerText = ('No response available OR enter more suitable prompt');
+    err.style.backgroundColor = '#ff726f';
+    err.style.color = 'white';
+    setTimeout(() =>  err.innerText = '', 5000);
   } 
 };
 
@@ -112,7 +118,7 @@ const displayResponses = async function(){
           parent.parentNode.removeChild(parent);
         };
 
-        console.log(div);
+        // console.log(div);
         li.appendChild(div);
         li.appendChild(deleteBtn);
         ul.appendChild(li);
@@ -121,9 +127,15 @@ const displayResponses = async function(){
   responseList = [];
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', async () => {
   const sendBtn = document.getElementById('send');
   sendBtn.addEventListener('click', addPrompt);
-  displayResponses();
-  // const poll = setInterval(() => displayResponses(), 2000);
+  await displayResponses();
+  const poll = setInterval(() => displayResponses(), 2000);
 });
+
+export default {
+  addPrompt,
+  displayResponses
+};

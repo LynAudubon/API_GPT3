@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style type="text/css">
+        textarea {
+            display: block;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +15,20 @@
 <body>
     <div id="container">
         <h1>Discourse with OpenAI</h1>
-        <div  id="new-prompt">
+        <span id="error">
+            <p></p>
+        </span>
+        <div id="new-prompt">
             <div>
                 <textarea id="desc" placeholder="Enter a new prompt here..."></textarea>
             </div>
             <button id="send">Send</button>
         </div>
         <h1>Responses</h1>
-        <ul id="response-list"></ul>
+        <section>
+            <ul id="response-list"></ul>
+        </section>
     </div>
-    
-    <script src="../js/index.js"></script>
+    <script type="module" src="../js/index.js"></script>
 </body>
 </html>

@@ -18,4 +18,4 @@ const responseSchema = new mongoose.Schema({
 
 //export the model
 const Response = mongoose.model('Response', responseSchema);
-export default { Response }; 
+export default { Response } ; 

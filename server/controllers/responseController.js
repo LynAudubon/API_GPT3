@@ -2,7 +2,7 @@ import Model from '../models/ResponseModel.js';
 import { ObjectId } from 'mongodb';
 
 const postResponse = async function(req, res, next){
-  console.log('control',req.body.response.choices[0].text);
+  // console.log('control',req.body.response.choices[0].text);
   try{
     const postNewResponse = new Model.Response({
       prompt: req.body.prompt,

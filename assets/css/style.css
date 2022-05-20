@@ -47,6 +47,10 @@ button {
     padding-bottom: 70px;
 }
 
+#new-prompt div{
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.171);
+}
+
 #desc {
     list-style: none;
     border: 1px solid #dfdfdf;
@@ -55,7 +59,7 @@ button {
     clear: both;
     font-size: 15px;
     line-height: 1.5em !important;
-    margin: 5px auto;
+    margin: 0px 7px 7px auto;
     padding: 25px 20px 40px;
 }
 

@@ -23,5 +23,5 @@ You can clone the app here on GitHub: https://github.com/LynAudubon/Shopify_Inte
 
 OR 
 
-Vsit the app deployed on Heroku:  https://git.heroku.com/shopify-challenge-lynda-2022.git
+Visit the app deployed on Heroku:  https://git.heroku.com/shopify-challenge-lynda-2022.git
 

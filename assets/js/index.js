@@ -4,7 +4,6 @@ const text = '';
 const ul = document.getElementById('response-list');
 // console.log(ul);
 
-
 const addPrompt = async function() {
   const newPrompt = document.getElementById('desc').value;
 

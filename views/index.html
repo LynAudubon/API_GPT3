@@ -14,18 +14,18 @@
 </head>
 <body>
     <div id="container">
-        <h1>Discourse with OpenAI</h1>
-        <span id="error">
-            <p></p>
-        </span>
         <div id="new-prompt">
+            <h1 id="title">Discourse with OpenAI</h1>
+            <span id="error">
+                <p></p>
+            </span>
             <div>
                 <textarea id="desc" placeholder="Enter a new prompt here..."></textarea>
             </div>
             <button id="send">Send</button>
         </div>
-        <h1>Responses</h1>
-        <section>
+        <section class="bottom-wrapper">
+            <h1>Responses</h1>
             <ul id="response-list"></ul>
         </section>
     </div>

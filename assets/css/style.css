@@ -10,19 +10,28 @@ body {
 }
 
 h1 {
-    font-family: cursive, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: lighter;
+}
+
+#title {
+    background-color: inherit;
+    
 }
 
 #container {
     position: relative;
     margin: 2em auto;
+    padding-top: 20px;
     width: 800px;
     max-width: 80%;
+    background: inherit;
+    border-radius: 5px;
 }
 
 #send {
     background-color: #ECB265;
+    margin: 5px;
 }
 
 #send:hover {
@@ -31,8 +40,8 @@ background-color: #ecb165a7;
 
 button {
     background-color: #009999;
-    /* Green */
     border: none;
+    border-radius: 10px;
     color: white;
     padding: 0.5em 1.2em;
     text-align: center;
@@ -45,22 +54,35 @@ button {
 
 #new-prompt {
     padding-bottom: 70px;
+    position: sticky;
+    top: 0px;
+    background: inherit;
+    z-index: 100;
+}
+
+.bottom-wrapper {
+    z-index: 0;
 }
 
 #new-prompt div{
-    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.171);
+    box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
 }
 
 #desc {
     list-style: none;
     border: 1px solid #dfdfdf;
+    border-radius: 10px;
     width: 100%;
     min-height: 4em;
     clear: both;
     font-size: 15px;
     line-height: 1.5em !important;
-    margin: 0px 7px 7px auto;
-    padding: 25px 20px 40px;
+    margin: 0px 0px 0px 0px;
+    padding: 25px 25px 40px;
 }
 
 ul {
@@ -71,12 +93,13 @@ ul {
 li {
     list-style: none;
     border: 1px solid #dfdfdf;
+    border-radius: 10px;
     width: 100%;
     min-height: 4em;
     clear: both;
     font-size: 15px;
     line-height: 1.5em !important;
-    margin: 5px auto;
+    margin: 0px auto;
     padding: 25px 20px 40px;
 }
 

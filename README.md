@@ -1,23 +1,23 @@
 # Shopify_Internship
 
-About:
-
-"Discourse with OpenAI"
+### H3 "Discourse with OpenAI"
 
 This basic app will take in a prompt and send it to the OpenAI engine which will in turn send back an appropriate response based on learned cases.
+-----------------------------------------------------------------------------------------------------------------
 
-App is built with:
-\*Vanilla JS
+### H3 App is built with:
 
-\*Node.js (server-side proxy for fetching on backend)
+  * Vanilla JS
 
-\*MongoDB/Mongoose database
+  * Node.js (server-side proxy for fetching on backend)
 
-\*ES modules(Client and Server-side)
+  * MongoDB/Mongoose database
 
-\*Unit and Integrative testing with Jest and Supertest
+  * ES modules(Client and Server-side)
 
-Getting Started:
+  * Unit and Integrative testing with Jest and Supertest
+
+### H3 Getting Started:
 
 You can clone the app here on GitHub: https://github.com/LynAudubon/Shopify_Internship
 

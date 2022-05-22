@@ -17,14 +17,13 @@ const postResponse = async function(req, res, next){
       return next();
     }
   }catch(error){
-    res.status(400).json({ message: error.message });//??????
+    res.status(400).json({ message: error.message });
   }
 };
 
 const getResponses = function(req,res,next){
   try{
     Model.Response.find({}, (err, responses) => {
-      if(err) return next('Error in getResponses: ' + err);
       res.status(200).json(responses);
     });
   }catch(error){
@@ -33,13 +32,13 @@ const getResponses = function(req,res,next){
 };
 
 const deleteResponse = async function(req,res,next){
+  console.log('req', req.body.id);
   const id = new ObjectId(req.body.id);
+  console.log('delete', id);
   try{
-    await Model.Response.findByIdAndRemove(id);
-    res.json({message: 'Message was successfully deleted'
-    });
+    const deleted = await Model.Response.findByIdAndRemove(id);
+    if(deleted) return res.status(200).json({message: 'Message was successfully deleted'});
   }catch(error){
-    // console.log({message: error.message});
     return next(error);
   }
 };

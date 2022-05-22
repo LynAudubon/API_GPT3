@@ -1,7 +1,6 @@
 //create api
 // const express = require('express');
 // const path = require('path');
-// const cors = require('cors');
 import express from 'express';
 
 import fetch from 'node-fetch';
@@ -24,9 +23,8 @@ import connectDB from './models/db.js';
 connectDB();
 
 //parse data
-app.use(express.json({ limit: '1mb' }));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-// app.use(cors());
 
 //acquire static files
 app.use(express.static(path.resolve(__dirname, '../assets/')));
@@ -70,7 +68,6 @@ app.post('/responses', responseController.postResponse, (req, res, err) => {
 
 app.delete('/responses', responseController.deleteResponse, (req,res,err) => {
   if(err) console.log('delete', err);
-  return res.status(200);
 });
 
 

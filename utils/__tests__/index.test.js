@@ -34,7 +34,7 @@ test('It should pass', () => {
     },
     instance: function () {
       event.displayResponses;
-      console.log('DisplayResponse called');
+      console.log('displayResponse called');
     }
   };
 

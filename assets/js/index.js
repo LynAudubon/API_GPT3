@@ -5,7 +5,7 @@ const ul = document.getElementById('response-list');
 // console.log(ul);
 
 const addPrompt = async function() {
-  const newPrompt = document.getElementById('desc').value;
+  const newPrompt = document.getElementById('desc').value.trim();
 
   const data = {
     prompt: newPrompt,
@@ -41,7 +41,7 @@ const addPrompt = async function() {
     document.getElementById('desc').value  = '';
   }else{
     const err = document.getElementById('error').children[0];
-    err.innerText = ('No response available OR enter more suitable prompt');
+    err.innerText = ('No response available, please enter more suitable prompt');
     err.style.backgroundColor = '#ff726f';
     err.style.color = 'white';
     setTimeout(() =>  err.innerText = '', 5000);
@@ -103,7 +103,7 @@ const displayResponses = async function(){
         deleteBtn.setAttribute('id', result._id);
         deleteBtn.classList.add('del');
         deleteBtn.onclick = async function(event) {
-          console.log(event);
+          console.log('event',event);
           await fetch('/responses', {
             method: 'DELETE',
             body: JSON.stringify({
@@ -125,7 +125,6 @@ const displayResponses = async function(){
     });
   responseList = [];
 };
-
 
 document.addEventListener('DOMContentLoaded', async () => {
   const sendBtn = document.getElementById('send');

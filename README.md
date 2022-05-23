@@ -1,11 +1,11 @@
 # Shopify_Internship
 
-### H3 "Discourse with OpenAI"
+## "Discourse with OpenAI"
 
-This basic app will take in a prompt and send it to the OpenAI engine which will in turn send back an appropriate response based on learned cases.
+#### This basic app will take in a prompt and send it to the OpenAI engine which will in turn send back an appropriate response based on learned cases.
 -----------------------------------------------------------------------------------------------------------------
 
-### H3 App is built with:
+### App is built with:
 
   * Vanilla JS
 
@@ -17,7 +17,7 @@ This basic app will take in a prompt and send it to the OpenAI engine which will
 
   * Unit and Integrative testing with Jest and Supertest
 
-### H3 Getting Started:
+### Getting Started:
 
 You can clone the app here on GitHub: https://github.com/LynAudubon/Shopify_Internship
 

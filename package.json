@@ -37,5 +37,10 @@
     "node-fetch": "^2.6.7",
     "path": "^0.12.7",
     "supertest": "^6.2.3"
+  },
+   "config": {
+    "mongodbMemoryServer": {
+      "version": "4.2.3"
+    }
   }
 }

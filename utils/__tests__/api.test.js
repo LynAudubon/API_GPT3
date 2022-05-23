@@ -5,10 +5,8 @@ import Model from '../../server/models/ResponseModel.js';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 
-
 describe('Response routes', () => {
   beforeAll(async () => {
-
     (async () => {
       const mongodb = await MongoMemoryServer.create();
       const mongoUri = mongodb.getUri();
@@ -19,7 +17,6 @@ describe('Response routes', () => {
         useUnifiedTopology: true,
       });
     })();
-
   });
 
   afterAll(async () => {
@@ -46,7 +43,7 @@ describe('Response routes', () => {
     });
   });
 
-  describe('POST method on route db', () => {
+  describe('POST method on route to db', () => {
     jest.setTimeout(60000);
     it('should return 200', async () => {
       const data = await Model.Response.create({
@@ -64,21 +61,18 @@ describe('Response routes', () => {
         .catch(err => console.log('error', err));
     });
 
-    it('should return message deleted', async () => {
-      const lastInserted = await Model.Response.find({}).sort({_id:-1}).limit(1);
-      console.log('last', lastInserted[0]._id);
+    describe('DELETE method on route to db', () => {
+      jest.setTimeout(60000);
+      it('should return message deleted', async () => {
+        const lastInserted = await Model.Response.find({}).sort({_id:-1}).limit(1);
+        // console.log('last', lastInserted[0]._id.toString());
 
-      const event = { 
-        target: {
-          id: lastInserted[0]._id
-        }
-      };
-      await supertest(app).delete('/responses')
-        .send(event)
-        .then(async (response) => {
-          expect(response.body.message).toBe('Message was successfully deleted');
-        })
-        .catch(err => console.log('error', err));
+        await supertest(app).delete('/responses/' + lastInserted[0]._id.toString())
+          .then((response) => {
+            expect(response.body.message).toBe('Message was successfully deleted');
+          })
+          .catch(err => console.log('error', err));
+      });
     });
   });
 });

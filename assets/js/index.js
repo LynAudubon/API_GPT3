@@ -103,8 +103,8 @@ const displayResponses = async function(){
         deleteBtn.setAttribute('id', result._id);
         deleteBtn.classList.add('del');
         deleteBtn.onclick = async function(event) {
-          console.log('event',event);
-          await fetch('/responses', {
+          console.log('event', event);
+          await fetch(`/responses/${result._id}`, {
             method: 'DELETE',
             body: JSON.stringify({
               id: event.target.id

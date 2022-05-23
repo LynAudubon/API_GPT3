@@ -32,8 +32,8 @@ const getResponses = function(req,res,next){
 };
 
 const deleteResponse = async function(req,res,next){
-  console.log('req', req.body.id);
-  const id = new ObjectId(req.body.id);
+  console.log('req', req.params);
+  const id = new ObjectId(req.params.id);
   console.log('delete', id);
   try{
     const deleted = await Model.Response.findByIdAndRemove(id);
